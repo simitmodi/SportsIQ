@@ -1,14 +1,13 @@
 {
   "functions": {
-    "api/proxy.php": { "runtime": "vercel-php@0.7.1" },
-    "index.php": { "runtime": "vercel-php@0.7.1" },
-    "dashboard.php": { "runtime": "vercel-php@0.7.1" },
-    "fan-zone.php": { "runtime": "vercel-php@0.7.1" }
+    "api/*.php": { "runtime": "vercel-php@0.7.1" }
   },
-  "routes": [
-    { "src": "/assets/(.+)", "dest": "/assets/$1" },
-    { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/", "dest": "/index.php" },
-    { "src": "/(.*)", "dest": "/$1" }
+  "rewrites": [
+    { "source": "/assets/(.*)", "destination": "/assets/$1" },
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/", "destination": "/api/index.php" },
+    { "source": "/index.php", "destination": "/api/index.php" },
+    { "source": "/dashboard.php", "destination": "/api/dashboard.php" },
+    { "source": "/fan-zone.php", "destination": "/api/fan-zone.php" }
   ]
 }
