@@ -1,6 +1,6 @@
 <?php
 // Unit 4: PHP Syntax & Integration (Starting Session)
-session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
