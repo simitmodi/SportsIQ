@@ -1,0 +1,9 @@
+bin/
+*.log
+.vscode/
+.idea/
+*.tmp
+*.zip
+*.rar
+dashboard.php.bak
+index.php.bak
